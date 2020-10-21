@@ -121,15 +121,15 @@
 </li>
 <li><p>输入</p>
 <ul>
-<li><p><code>BufferedReader ir = new BufferedReader(new InputStreamReader(System.in));</code></p>
-</li>
-<li><p><code>int a = ir.readline();</code></p>
-</li>
-<li><p>or <code>Scanner cin = new Scanner(System.in); int a = cin.nextInt();int b = cin.nextInt;</code></p>
-</li>
+<li><code>BufferedReader ir = new BufferedReader(new InputStreamReader(System.in));</code></li>
+<li><code>int a = ir.readline();</code></li>
 </ul>
 </li>
 </ol>
+<ul>
+<li>or <code>Scanner cin = new Scanner(System.in); int a = cin.nextInt();int b = cin.nextInt;</code></li>
+</ul>
+<hr>
 <h1 id="第二章-数据类型"><a href="#第二章-数据类型" class="headerlink" title="第二章 数据类型"></a>第二章 数据类型</h1><h2 id="2-3-数据类型"><a href="#2-3-数据类型" class="headerlink" title="2.3 数据类型"></a>2.3 数据类型</h2><table>
 <thead>
 <tr>
@@ -195,12 +195,139 @@
 </ul>
 </li>
 </ul>
+<h2 id="2-6-数组"><a href="#2-6-数组" class="headerlink" title="2.6 数组"></a>2.6 数组</h2><ol>
+<li>属性 array.length</li>
+<li>二维数组 </li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> two[][];</span><br><span class="line"><span class="keyword">int</span>[][] two;</span><br><span class="line"><span class="keyword">int</span>[][] two = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>][<span class="number">3</span>];</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-7-字符串"><a href="#2-7-字符串" class="headerlink" title="2.7 字符串"></a>2.7 字符串</h2><ol>
+<li>两个类<ul>
+<li>String: 不能修改</li>
+<li>StringBuffer:  可变，线程安全</li>
+<li>StringBuilder：可变，快，单线程，非线程安全</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="第三章-程序控制语句"><a href="#第三章-程序控制语句" class="headerlink" title="第三章 程序控制语句"></a>第三章 程序控制语句</h1><h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2><p>用法，相比if else，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression)&#123;<span class="keyword">case</span>:<span class="keyword">break</span>;&#125;  <span class="comment">// expression必须为byte short int char或者 enum；如果是String类 用if</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="for"><a href="#for" class="headerlink" title="for"></a>for</h2><p>for-each扩充</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] array=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;++i)</span><br><span class="line">    sum += array[i];</span><br><span class="line"><span class="comment">// sum = 15;</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> e : array)  <span class="comment">// beauty</span></span><br><span class="line">    sum += e;</span><br><span class="line"><span class="comment">//sum = 30;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="第四章-面向对象程序设计"><a href="#第四章-面向对象程序设计" class="headerlink" title="第四章 面向对象程序设计"></a>第四章 面向对象程序设计</h1><p><strong>OOP</strong>：Object Oriented Programming 面向对象编程</p>
+<p><strong>特点</strong>：</p>
+<pre><code>* 封装
+* 继承：Java不支持多重继承，子类只能有一个父类
+* 多态：方法重载</code></pre>
+<h2 id="class"><a href="#class" class="headerlink" title="class"></a>class</h2><p>类声明的格式：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[修饰符] class 类名 [extends fatherClass] [implements interfaces]</span><br></pre></td></tr></table></figure>
+
+<p>类名的要求：规范是首字母大写，采用驼峰式写法</p>
+<p>类的修饰符有三个：final, abstract,public(final和abstract不能修饰同一个类)</p>
+<p>extends: 继承；只能有一个父类</p>
+<p>implements：实现；可以试下多个接口类</p>
+<hr>
+<p><strong>类体</strong></p>
+<ol>
+<li><p>成员变量的修饰符</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//[修饰符] 成员变量类型 成员变量名</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">int</span> name;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>默认访问修饰符：成员变量可以被同一个包（package）中的任何类访问</p>
+</li>
+<li><p>public：项目中的任何地方</p>
+</li>
+<li><p>protected：同一个package中的继承类</p>
+</li>
+<li><p>private：同一个class</p>
+</li>
+<li><p>static：类变量或者静态变量，同一个class的所有具体实例共享同一个变量。、</p>
+</li>
+<li><p>final:Java中的常量必须是类的成员，和static一起使用是不冲突的</p>
+</li>
+<li><p><strong>transient</strong>：临时的，在默认状态下，所有的变量都是对象永久状态下的一部分；transient则指示JVM该变量不属于永久状态，主要用于实现不同对象的串行化功能</p>
+</li>
+<li><p><strong>volatile</strong>:易变的，声明一个多线程共享变量</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">VolatileVar</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">volatile</span> <span class="keyword">int</span> volatileV;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>成员变量使用 ：类名.变量名</p>
+</li>
+<li><p>成员方法说明</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[修饰符] 返回类型 方法名([形参列表]) [<span class="keyword">throws</span> 异常列表]</span><br></pre></td></tr></table></figure>
+
+<p>方法修饰符</p>
+<ol>
+<li>default：同一个包中的任何类</li>
+<li>public：被其他类访问</li>
+<li>protected：继承类</li>
+<li>private：只能由说明该方法的类访问</li>
+<li>static：静态方法，又叫类方法；无static修饰的叫实例方法。类方法是该类的所有对象共享的方法</li>
+<li>abstract：无方法体</li>
+<li>final：不能由子类改变</li>
+<li><strong>synchronized</strong>：同步；实现线程同步</li>
+<li>native：本地，与本地计算机有关</li>
+</ol>
+<p><strong>方法名应该是有意义的动词或者动词短语</strong></p>
+</li>
+<li><p>实例化对象</p>
+<p>创建一个对象包括对象的声明，为对象分配内存空间和初赋值这三个步骤</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Student.java</span></span><br><span class="line">pubilc <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span></span>&#123;&#125;;                  <span class="comment">//默认的构造方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name, <span class="keyword">int</span> age)</span> <span class="comment">// 带参数构造</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">&quot; is &quot;</span> + age + <span class="string">&quot; years old!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Student stu = <span class="keyword">new</span> Student();</span><br><span class="line">        stu.name = <span class="string">&quot;ZhangSan&quot;</span>;</span><br><span class="line">        stu.age = <span class="number">18</span>;</span><br><span class="line">        stu.print();</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法重载</p>
+<p>方法的名字相同，但是参数不能相同</p>
+</li>
+<li><p>成员变量的访问权限</p>
+<table>
+<thead>
+<tr>
+<th>-访问权限</th>
+<th>-同一个类</th>
+<th>-同一个包中</th>
+<th>-不同包的子类</th>
+<th>-不同包中的非子类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>private</td>
+<td>可以</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>defaullt</td>
+<td>可以</td>
+<td>可以</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>protected</td>
+<td>可以</td>
+<td>可以</td>
+<td>可以</td>
+<td></td>
+</tr>
+<tr>
+<td>public</td>
+<td>可以</td>
+<td>可以</td>
+<td>可以</td>
+<td>可以</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/21/%E7%AC%AC%E4%B8%80%E7%AB%A0-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" data-id="ckgj897qz0009wofd7czp2np2" class="article-share-link" data-share="baidu" data-title="Java">Share</a>
+        <a data-url="http://example.com/2020/10/21/%E7%AC%AC%E4%B8%80%E7%AB%A0-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" data-id="ckgjkmx8z000rmgfdevae08mx" class="article-share-link" data-share="baidu" data-title="Java">Share</a>
       
 
       
@@ -251,7 +378,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/20/git/" data-id="ckgj897qq0001wofdfo7eh464" class="article-share-link" data-share="baidu" data-title="Git">Share</a>
+        <a data-url="http://example.com/2020/10/20/git/" data-id="ckgjkmx6i0001mgfdep7jelhf" class="article-share-link" data-share="baidu" data-title="Git">Share</a>
       
 
       
@@ -301,7 +428,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/15/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" data-id="ckgj897qv0004wofdfvxjcwvq" class="article-share-link" data-share="baidu" data-title="开发规范">Share</a>
+        <a data-url="http://example.com/2020/10/15/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" data-id="ckgjkmx84000omgfd3otshdes" class="article-share-link" data-share="baidu" data-title="开发规范">Share</a>
       
 
       
@@ -363,7 +490,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/14/%E8%BF%90%E8%A1%8C%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AEhalo/" data-id="ckgj897r0000bwofd45q7exmx" class="article-share-link" data-share="baidu" data-title="运行开源项目halo">Share</a>
+        <a data-url="http://example.com/2020/10/14/%E8%BF%90%E8%A1%8C%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AEhalo/" data-id="ckgjkmx6z0008mgfdbk84hslz" class="article-share-link" data-share="baidu" data-title="运行开源项目halo">Share</a>
       
 
       
@@ -457,7 +584,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/13/%E9%9D%A2%E7%BB%8F/" data-id="ckgj897r3000gwofd12z2figz" class="article-share-link" data-share="baidu" data-title="面经">Share</a>
+        <a data-url="http://example.com/2020/10/13/%E9%9D%A2%E7%BB%8F/" data-id="ckgjkmx80000bmgfd95by97d6" class="article-share-link" data-share="baidu" data-title="面经">Share</a>
       
 
       
@@ -538,7 +665,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/13/Java%E7%AC%94%E8%AE%B0/" data-id="ckgj897q60000wofd2hv593dy" class="article-share-link" data-share="baidu" data-title="Java笔记">Share</a>
+        <a data-url="http://example.com/2020/10/13/Java%E7%AC%94%E8%AE%B0/" data-id="ckgjkmx2x0000mgfd9cdl7cnd" class="article-share-link" data-share="baidu" data-title="Java笔记">Share</a>
       
 
       
@@ -601,7 +728,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/12/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" data-id="ckgj897qy0008wofd0zwqb8ge" class="article-share-link" data-share="baidu" data-title="开源项目使用指南">Share</a>
+        <a data-url="http://example.com/2020/10/12/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" data-id="ckgjkmx6w0005mgfdeh5oggew" class="article-share-link" data-share="baidu" data-title="开源项目使用指南">Share</a>
       
 
       
@@ -653,7 +780,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/12/%E9%93%BE%E6%8E%A5github-io%E5%87%BA%E9%94%99/" data-id="ckgj897r1000ewofda107dihg" class="article-share-link" data-share="baidu" data-title="连接github.io出错">Share</a>
+        <a data-url="http://example.com/2020/10/12/%E9%93%BE%E6%8E%A5github-io%E5%87%BA%E9%94%99/" data-id="ckgjkmx7y0009mgfdbivmadjq" class="article-share-link" data-share="baidu" data-title="连接github.io出错">Share</a>
       
 
       
@@ -717,7 +844,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/12/hexo%E4%BD%BF%E7%94%A8/" data-id="ckgj897qt0003wofd066w4t45" class="article-share-link" data-share="baidu" data-title="hexo使用">Share</a>
+        <a data-url="http://example.com/2020/10/12/hexo%E4%BD%BF%E7%94%A8/" data-id="ckgjkmx6s0003mgfd25tvcald" class="article-share-link" data-share="baidu" data-title="hexo使用">Share</a>
       
 
       
@@ -828,7 +955,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/12/markdown%E8%AF%AD%E6%B3%95/" data-id="ckgj897qw0005wofd3ytg0rpf" class="article-share-link" data-share="baidu" data-title="markdown语法">Share</a>
+        <a data-url="http://example.com/2020/10/12/markdown%E8%AF%AD%E6%B3%95/" data-id="ckgjkmx6u0004mgfdfjxibkok" class="article-share-link" data-share="baidu" data-title="markdown语法">Share</a>
       
 
       
