@@ -68,14 +68,14 @@
     <div class="outer">
       <section id="main">
   
-    <article id="post-日常记录0115" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-第一章-Java语言概述" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/16/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%950115/" class="article-date">
-  <time datetime="2020-10-15T16:33:03.000Z" itemprop="datePublished">2020-10-16</time>
+    <a href="/2020/10/21/%E7%AC%AC%E4%B8%80%E7%AB%A0-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" class="article-date">
+  <time datetime="2020-10-21T06:48:48.000Z" itemprop="datePublished">2020-10-21</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/daily/">daily</a>►<a class="article-category-link" href="/categories/daily/20201015/">20201015</a>
+    <a class="article-category-link" href="/categories/Java/">Java</a>►<a class="article-category-link" href="/categories/Java/%E7%AC%AC%E4%B8%80%E7%AB%A0-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">第一章 Java语言概述</a>
   </div>
 
   </div>
@@ -86,7 +86,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/16/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%950115/">日常记录0115</a>
+      <a class="article-title" href="/2020/10/21/%E7%AC%AC%E4%B8%80%E7%AB%A0-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">Java</a>
     </h1>
   
 
@@ -94,26 +94,121 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="去二哥家陪老妈"><a href="#去二哥家陪老妈" class="headerlink" title="去二哥家陪老妈"></a>去二哥家陪老妈</h2><p>小孩子真的是天使吧，不能对他们太凶了，胖胖对我的依赖，让我开心，改变了我，还有白白的小妹</p>
-<h2 id="风犬少年的天空"><a href="#风犬少年的天空" class="headerlink" title="风犬少年的天空"></a>风犬少年的天空</h2><p>钦哥语录</p>
+        <h1 id="第一章-Java语言描述"><a href="#第一章-Java语言描述" class="headerlink" title="第一章 Java语言描述"></a>第一章 Java语言描述</h1><h2 id="1-1-Java语言的产生及其特点"><a href="#1-1-Java语言的产生及其特点" class="headerlink" title="1.1 Java语言的产生及其特点"></a>1.1 Java语言的产生及其特点</h2><ol>
+<li><p>关键字： 网络计算模式，跨平台，</p>
+</li>
+<li><p>JVM：跨平台，执行class字节码文件，可移植性</p>
+</li>
+<li><p>write once, run anywhere</p>
+</li>
+<li><p>特点：简单，面向对象，分布式，健壮，安全（沙箱），可移植，多线程，动态..</p>
+</li>
+</ol>
+<h2 id="1-2-Java运行环境与发开发环境"><a href="#1-2-Java运行环境与发开发环境" class="headerlink" title="1.2 Java运行环境与发开发环境"></a>1.2 Java运行环境与发开发环境</h2><ol>
+<li><p>JRE 运行别人的程序</p>
+</li>
+<li><p>JDK 开发Java程序</p>
+</li>
+<li><p>过程：编写源代码，编译成字节码文件（二进制），运行java文件</p>
+</li>
+<li><p>运行脚本<code>javac HelloWorld.java       java HelloWorld</code></p>
+</li>
+<li><p>jar： jar.exe将一些文件压缩成JAR文件，发布应用程序，解释器执行<code>java -jar HelloWorld</code></p>
+</li>
+</ol>
+<h2 id="1-3-Java程序举例"><a href="#1-3-Java程序举例" class="headerlink" title="1.3 Java程序举例"></a>1.3 Java程序举例</h2><ol>
+<li><p>分类：Application Applet Servlet</p>
+</li>
+<li><p>输入</p>
 <ul>
-<li>谁都没有资格，去劝一个受伤的人大度</li>
-<li>世界上不是所有的无辜都可以被证明。</li>
+<li><p><code>BufferedReader ir = new BufferedReader(new InputStreamReader(System.in));</code></p>
+</li>
+<li><p><code>int a = ir.readline();</code></p>
+</li>
+<li><p>or <code>Scanner cin = new Scanner(System.in); int a = cin.nextInt();int b = cin.nextInt;</code></p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="第二章-数据类型"><a href="#第二章-数据类型" class="headerlink" title="第二章 数据类型"></a>第二章 数据类型</h1><h2 id="2-3-数据类型"><a href="#2-3-数据类型" class="headerlink" title="2.3 数据类型"></a>2.3 数据类型</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>所占位数</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>short</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>long</td>
+<td>64</td>
+<td></td>
+</tr>
+<tr>
+<td>float</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>double</td>
+<td>64</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>false true</td>
+<td></td>
+</tr>
+<tr>
+<td>char</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>类型转换</strong>：</p>
+<ul>
+<li>自动类型转换，地位到高位<ul>
+<li>顺序：byte、short、char—》int—》long—》float—》double</li>
+</ul>
+</li>
+<li>强制类型转换,高级向低级数据类型转换<ul>
+<li><code>int i=9;char c; c=(char)i;</code></li>
+</ul>
+</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/16/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%950115/" data-id="ckgb4cqn00008vsfd0y8y4gt8" class="article-share-link" data-share="baidu" data-title="日常记录0115">Share</a>
+        <a data-url="http://example.com/2020/10/21/%E7%AC%AC%E4%B8%80%E7%AB%A0-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" data-id="ckgj897qz0009wofd7czp2np2" class="article-share-link" data-share="baidu" data-title="Java">Share</a>
       
 
       
-        <a href="http://example.com/2020/10/16/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%950115/#ds-thread" class="article-comment-link">Comments</a>
+        <a href="http://example.com/2020/10/21/%E7%AC%AC%E4%B8%80%E7%AB%A0-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/#ds-thread" class="article-comment-link">Comments</a>
       
 
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8-%E9%A3%8E%E7%8A%AC/" rel="tag">日常 风犬</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
 
     </footer>
   </div>
@@ -122,16 +217,12 @@
 
 
   
-    <article id="post-日常记录1014" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/15/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%951014/" class="article-date">
-  <time datetime="2020-10-14T17:43:53.000Z" itemprop="datePublished">2020-10-15</time>
+    <a href="/2020/10/20/git/" class="article-date">
+  <time datetime="2020-10-20T15:55:18.000Z" itemprop="datePublished">2020-10-20</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/daily/">daily</a>►<a class="article-category-link" href="/categories/daily/20201014/">20201014</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -140,7 +231,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/15/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%951014/">日常记录1014</a>
+      <a class="article-title" href="/2020/10/20/git/">Git</a>
     </h1>
   
 
@@ -148,55 +239,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午</h2><p>上班</p>
-<p>将halo项目配置运行起来了</p>
-<h2 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h2><p>看了计算机网络</p>
-<p>大致：应用层，传输层，网络层，数字链路层，物理层</p>
-<p>FTP  TCP/UDP</p>
-<table>
-<thead>
-<tr>
-<th>应用层</th>
-<th align="left">FTP协议</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>传输层</td>
-<td align="left">TCP/UDP</td>
-</tr>
-<tr>
-<td>网络层</td>
-<td align="left">IP</td>
-</tr>
-<tr>
-<td>数字链路层</td>
-<td align="left">MAC地址</td>
-</tr>
-<tr>
-<td>物理层</td>
-<td align="left">..</td>
-</tr>
-</tbody></table>
-<h2 id="晚上"><a href="#晚上" class="headerlink" title="晚上"></a>晚上</h2><p>参加工商银行笔试：</p>
+        <h2 id="Hexo使用时遇到"><a href="#Hexo使用时遇到" class="headerlink" title="Hexo使用时遇到"></a>Hexo使用时遇到</h2><p><code>unable to access &#39;https://github.com/zbydaily/zbydaily.github.io.git/&#39;: The requested URL returned error: 403</code></p>
+<p>原因是切换git的，但是windows默认保留的是上一个账号的username和email，因此Hexo deploy失败</p>
+<p><strong>解决</strong>：</p>
 <ul>
-<li>综合：考得很广，文科；</li>
-<li>技术题：数据库偏多，涉及的知识点偏旧，考操作excel表格的</li>
+<li>控制面板 – &gt; 用户账号 –&gt; window 凭据 删除之前的就好了,再次上传时就会提示需要输入当前仓库的账号和密码</li>
+<li>or </li>
 </ul>
-<p>除非比不得已，否则不考虑银行吧，不适合我这个圈的</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/15/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%951014/" data-id="ckgb4cqmy0005vsfdcqiealpn" class="article-share-link" data-share="baidu" data-title="日常记录1014">Share</a>
+        <a data-url="http://example.com/2020/10/20/git/" data-id="ckgj897qq0001wofdfo7eh464" class="article-share-link" data-share="baidu" data-title="Git">Share</a>
       
 
       
-        <a href="http://example.com/2020/10/15/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%951014/#ds-thread" class="article-comment-link">Comments</a>
+        <a href="http://example.com/2020/10/20/git/#ds-thread" class="article-comment-link">Comments</a>
       
 
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8-%E5%B7%A5%E8%A1%8C%E7%AC%94%E8%AF%95/" rel="tag">日常 工行笔试</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
 
     </footer>
   </div>
@@ -238,7 +301,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/15/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" data-id="ckgb4cqmv0003vsfd86w9bm3l" class="article-share-link" data-share="baidu" data-title="开发规范">Share</a>
+        <a data-url="http://example.com/2020/10/15/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" data-id="ckgj897qv0004wofdfvxjcwvq" class="article-share-link" data-share="baidu" data-title="开发规范">Share</a>
       
 
       
@@ -300,7 +363,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/14/%E8%BF%90%E8%A1%8C%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AEhalo/" data-id="ckgb4cqn4000evsfd96s05yy0" class="article-share-link" data-share="baidu" data-title="运行开源项目halo">Share</a>
+        <a data-url="http://example.com/2020/10/14/%E8%BF%90%E8%A1%8C%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AEhalo/" data-id="ckgj897r0000bwofd45q7exmx" class="article-share-link" data-share="baidu" data-title="运行开源项目halo">Share</a>
       
 
       
@@ -394,7 +457,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/13/%E9%9D%A2%E7%BB%8F/" data-id="ckgb4cqo4000mvsfdek128rpa" class="article-share-link" data-share="baidu" data-title="面经">Share</a>
+        <a data-url="http://example.com/2020/10/13/%E9%9D%A2%E7%BB%8F/" data-id="ckgj897r3000gwofd12z2figz" class="article-share-link" data-share="baidu" data-title="面经">Share</a>
       
 
       
@@ -404,101 +467,6 @@
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-时间安排" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/13/%E6%97%B6%E9%97%B4%E5%AE%89%E6%8E%92/" class="article-date">
-  <time datetime="2020-10-13T09:39:02.000Z" itemprop="datePublished">2020-10-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/13/%E6%97%B6%E9%97%B4%E5%AE%89%E6%8E%92/">时间安排</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="10-14-星期三-工商银行"><a href="#10-14-星期三-工商银行" class="headerlink" title="10.14 星期三 工商银行"></a>10.14 星期三 工商银行</h2><p>18:30</p>
-<h2 id="10-16-星期五早上-建设银行"><a href="#10-16-星期五早上-建设银行" class="headerlink" title="10.16 星期五早上 建设银行"></a>10.16 星期五早上 建设银行</h2><p>  正式考试时间：北京时间2020年10月16日上午09:00-12:00</p>
-<h2 id="10-19-星期一-招行银行"><a href="#10-19-星期一-招行银行" class="headerlink" title="10.19 星期一 招行银行"></a>10.19 星期一 招行银行</h2><p>时间：14：00-16：30</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://example.com/2020/10/13/%E6%97%B6%E9%97%B4%E5%AE%89%E6%8E%92/" data-id="ckgb4cqnl000hvsfd6lfz40fe" class="article-share-link" data-share="baidu" data-title="时间安排">Share</a>
-      
-
-      
-        <a href="http://example.com/2020/10/13/%E6%97%B6%E9%97%B4%E5%AE%89%E6%8E%92/#ds-thread" class="article-comment-link">Comments</a>
-      
-
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AC%94%E8%AF%95%E9%9D%A2%E8%AF%95/" rel="tag">笔试面试</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-日常记录1013" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/13/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%951013/" class="article-date">
-  <time datetime="2020-10-12T17:25:24.000Z" itemprop="datePublished">2020-10-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/daily/">daily</a>►<a class="article-category-link" href="/categories/daily/2020-13/">2020.13</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/13/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%951013/">日常计划记录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="2020-10-13"><a href="#2020-10-13" class="headerlink" title="2020.10.13"></a>2020.10.13</h2><p>下午参加了奥哲的宣讲会，笔试面试加晚上HR面，感觉好好，后面两天出结果，希望能拿到第一个offer</p>
-<p>感慨于自己的基础太差了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://example.com/2020/10/13/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%951013/" data-id="ckgb4cqn3000cvsfd0c1admh5" class="article-share-link" data-share="baidu" data-title="日常计划记录">Share</a>
-      
-
-      
-        <a href="http://example.com/2020/10/13/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%951013/#ds-thread" class="article-comment-link">Comments</a>
-      
-
-      
     </footer>
   </div>
   
@@ -570,7 +538,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/13/Java%E7%AC%94%E8%AE%B0/" data-id="ckgb4cqme0000vsfd9us68uzm" class="article-share-link" data-share="baidu" data-title="Java笔记">Share</a>
+        <a data-url="http://example.com/2020/10/13/Java%E7%AC%94%E8%AE%B0/" data-id="ckgj897q60000wofd2hv593dy" class="article-share-link" data-share="baidu" data-title="Java笔记">Share</a>
       
 
       
@@ -633,7 +601,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/12/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" data-id="ckgb4cqn2000avsfdeg6weia4" class="article-share-link" data-share="baidu" data-title="开源项目使用指南">Share</a>
+        <a data-url="http://example.com/2020/10/12/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" data-id="ckgj897qy0008wofd0zwqb8ge" class="article-share-link" data-share="baidu" data-title="开源项目使用指南">Share</a>
       
 
       
@@ -685,7 +653,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/12/%E9%93%BE%E6%8E%A5github-io%E5%87%BA%E9%94%99/" data-id="ckgb4cqo3000jvsfd202o7oet" class="article-share-link" data-share="baidu" data-title="连接github.io出错">Share</a>
+        <a data-url="http://example.com/2020/10/12/%E9%93%BE%E6%8E%A5github-io%E5%87%BA%E9%94%99/" data-id="ckgj897r1000ewofda107dihg" class="article-share-link" data-share="baidu" data-title="连接github.io出错">Share</a>
       
 
       
@@ -702,11 +670,182 @@
 
 
   
+    <article id="post-hexo使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/12/hexo%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2020-10-11T18:06:59.000Z" itemprop="datePublished">2020-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/12/hexo%E4%BD%BF%E7%94%A8/">hexo使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="接触"><a href="#接触" class="headerlink" title="接触"></a>接触</h2><p>b站codersheep:<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty">https://www.bilibili.com/video/BV1Yb411a7ty</a><br>来自评论的视频总结如下：</p>
+<p>—    #安装Nodejs<br>node -v    #查看node版本<br>npm -v    #查看npm版本<br>npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a>    #安装淘宝的cnpm 管理器<br>cnpm -v    #查看cnpm版本<br>cnpm install -g hexo-cli    #安装hexo框架<br>hexo -v    #查看hexo版本<br>mkdir blog    #创建blog目录<br>cd blog     #进入blog目录<br>sudo hexo init     #生成博客 初始化博客<br>hexo s    #启动本地博客服务<br><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>    #本地访问地址<br>hexo n “我的第一篇文章” #创建新的文章<br>#返回blog目录<br>hexo clean #清理<br>hexo g #生成<br>#Github创建一个新的仓库 YourGithubName.github.io<br>cnpm install –save hexo-deployer-git #在blog目录下安装git部署插件</p>
+<hr>
+<h1 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h1><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line"> 	repo: https:&#x2F;&#x2F;github.com&#x2F;YourGithubName&#x2F;YourGithubName.github.io.git</span><br><span class="line">  	branch: master</span><br></pre></td></tr></table></figure>
 
 
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-  </nav>
+
+<p>hexo d    #部署到Github仓库里<br><a target="_blank" rel="noopener" href="https://yourgithubname.github.io/">https://YourGithubName.github.io/</a>  #访问这个地址可以查看博客</p>
+<p> git clone <a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia  #下载yilia主题到本地</p>
+<p>#修改hexo根目录下的 _config.yml 文件 ： theme: yilia</p>
+<p>hexo c    #清理一下<br>hexo g    #生成<br>hexo d    #部署到远程Github仓库<br><a target="_blank" rel="noopener" href="https://yourgithubname.github.io/">https://YourGithubName.github.io/</a>  #查看博客</p>
+<hr>
+<h2 id="bug本地图片"><a href="#bug本地图片" class="headerlink" title="bug本地图片"></a>bug本地图片</h2><p>在typora写的markdown文档，本地图片不能显示<br>解决：通过csdn博主<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq904305159/article/details/104162802?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param">https://blog.csdn.net/qq904305159/article/details/104162802?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param</a></p>
+<p>最终读官方文档的<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/asset-folders">官方说明</a><br>图片放在source下面再新建文件  eg:img/1.png  </p>
+<hr>
+<pre><code>#markdown in hexo
+![1](/img/1.png)</code></pre>
+<hr>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>安装了hexo，看到是markdown的语法文档<br>虽然hexo也是支持markdown，但是可能编译渲染策略与typora不一样，应该是hexo的官方文档为主</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://example.com/2020/10/12/hexo%E4%BD%BF%E7%94%A8/" data-id="ckgj897qt0003wofd066w4t45" class="article-share-link" data-share="baidu" data-title="hexo使用">Share</a>
+      
+
+      
+        <a href="http://example.com/2020/10/12/hexo%E4%BD%BF%E7%94%A8/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-markdown语法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/12/markdown%E8%AF%AD%E6%B3%95/" class="article-date">
+  <time datetime="2020-10-11T17:43:38.000Z" itemprop="datePublished">2020-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/12/markdown%E8%AF%AD%E6%B3%95/">markdown语法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="学习地址"><a href="#学习地址" class="headerlink" title="学习地址"></a>学习地址</h2><p>菜鸟教程<a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">markdown教程</a></p>
+<h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><p>标题大小：有#1~6个控制 </p>
+<p>脚注：出错了。。。</p>
+<p>分割线是连续的—或者***，效果如下：长长的横线</p>
+<hr>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>无序：前面是-+*三种加一个空格</p>
+<p>有序：数字加.加空格</p>
+<p>嵌套：里面需要在前面加四个空格，演示如下</p>
+<ol>
+<li>第一名<ul>
+<li>姓名<ul>
+<li>成绩</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>第二名<ul>
+<li>姓名</li>
+<li>成绩</li>
+</ul>
+</li>
+</ol>
+<p>​    ….</p>
+<hr>
+<h2 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h2><p>符号：&gt;</p>
+<p>可以嵌套 1~n,</p>
+<p>列表中嵌套使用区块，需要在&gt;前面加上四个空格</p>
+<hr>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>用反引号`（在1的前面~，英文符）包裹</p>
+<p>前后用三个’’’包裹,可以注明编码语言</p>
+<hr>
+<h2 id="链接url"><a href="#链接url" class="headerlink" title="链接url"></a>链接url</h2><p>格式：[] ():链接名称，链接地址  或者&lt;&gt; 里面链接地址     这两种模式，示例如下</p>
+<p>1  <a href="www.baidu.com">百度</a></p>
+<p>2 &lt;<a target="_blank" rel="noopener" href="http://www.runoob.com&gt;/">www.runoob.com&gt;</a></p>
+<p>高级格式： </p>
+<p>​    [] []中间没有空格的,示例</p>
+<p>[百度] <a href="www.baidu.com">1</a></p>
+<p><a href="www.baidu.com">1</a> <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a>    1]后面加冒号:</p>
+<p>效果如下，</p>
+<p><a href="www.baidu.com">百度</a></p>
+<hr>
+<h2 id="链接图片"><a href="#链接图片" class="headerlink" title="链接图片"></a>链接图片</h2><p>![] ()中间没有空格 ：[]里面放文字注明，()放地址 与url区别是前面的!</p>
+<hr>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>表格1</p>
+<p><img src="/images/1.png" alt="1"></p>
+<p>表格2</p>
+<p><img src="/images/2.png" alt="2"></p>
+<p>我来打一遍效果</p>
+<table>
+<thead>
+<tr>
+<th align="left">左对齐</th>
+<th align="right">右对齐</th>
+<th align="center">居中</th>
+<th align="left">一般</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">哈哈哈</td>
+<td align="right">哈哈哈哈</td>
+<td align="center">哈哈哈哈</td>
+<td align="left">哈哈哈</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="markdown的高级模式"><a href="#markdown的高级模式" class="headerlink" title="markdown的高级模式"></a>markdown的高级模式</h2><p>里面包含转义，流程图演示</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-advance.html">地址</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://example.com/2020/10/12/markdown%E8%AF%AD%E6%B3%95/" data-id="ckgj897qw0005wofd3ytg0rpf" class="article-share-link" data-share="baidu" data-title="markdown语法">Share</a>
+      
+
+      
+        <a href="http://example.com/2020/10/12/markdown%E8%AF%AD%E6%B3%95/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
 </section>
       
       <aside id="sidebar">
@@ -715,7 +854,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/daily/">daily</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/daily/2020-13/">2020.13</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/daily/20201014/">20201014</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/daily/20201015/">20201015</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/%E7%AC%AC%E4%B8%80%E7%AB%A0-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">第一章 Java语言概述</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -724,7 +863,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E8%AF%AD%E6%B3%95/" rel="tag">Java语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/githubio/" rel="tag">githubio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/halo/" rel="tag">halo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" rel="tag">开发规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" rel="tag">开源项目</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8-%E5%B7%A5%E8%A1%8C%E7%AC%94%E8%AF%95/" rel="tag">日常 工行笔试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8-%E9%A3%8E%E7%8A%AC/" rel="tag">日常 风犬</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AF%95%E9%9D%A2%E8%AF%95/" rel="tag">笔试面试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E8%AF%AD%E6%B3%95/" rel="tag">Java语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/githubio/" rel="tag">githubio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/halo/" rel="tag">halo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" rel="tag">开发规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" rel="tag">开源项目</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -733,7 +872,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Java%E8%AF%AD%E6%B3%95/" style="font-size: 10px;">Java语法</a> <a href="/tags/githubio/" style="font-size: 10px;">githubio</a> <a href="/tags/halo/" style="font-size: 10px;">halo</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" style="font-size: 10px;">开发规范</a> <a href="/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" style="font-size: 10px;">开源项目</a> <a href="/tags/%E6%97%A5%E5%B8%B8-%E5%B7%A5%E8%A1%8C%E7%AC%94%E8%AF%95/" style="font-size: 10px;">日常 工行笔试</a> <a href="/tags/%E6%97%A5%E5%B8%B8-%E9%A3%8E%E7%8A%AC/" style="font-size: 10px;">日常 风犬</a> <a href="/tags/%E7%AC%94%E8%AF%95%E9%9D%A2%E8%AF%95/" style="font-size: 10px;">笔试面试</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 10px;">面经</a>
+      <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Java%E8%AF%AD%E6%B3%95/" style="font-size: 10px;">Java语法</a> <a href="/tags/githubio/" style="font-size: 10px;">githubio</a> <a href="/tags/halo/" style="font-size: 10px;">halo</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" style="font-size: 10px;">开发规范</a> <a href="/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" style="font-size: 10px;">开源项目</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 10px;">面经</a>
     </div>
   </div>
 
@@ -742,7 +881,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">12</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">10</span></li></ul>
     </div>
   </div>
 
@@ -754,11 +893,11 @@
       <ul>
         
           <li>
-            <a href="/2020/10/16/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%950115/">日常记录0115</a>
+            <a href="/2020/10/21/%E7%AC%AC%E4%B8%80%E7%AB%A0-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">Java</a>
           </li>
         
           <li>
-            <a href="/2020/10/15/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%951014/">日常记录1014</a>
+            <a href="/2020/10/20/git/">Git</a>
           </li>
         
           <li>
