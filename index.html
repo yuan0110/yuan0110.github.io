@@ -113,11 +113,11 @@
 </li>
 <li><p>运行脚本<code>javac HelloWorld.java       java HelloWorld</code></p>
 </li>
-<li><p>jar： jar.exe将一些文件压缩成JAR文件，发布应用程序，解释器执行<code>java -jar HelloWorld</code></p>
+<li><p>jar： jar.exe将一些文件压缩成JAR文件，发布应用程序，解释器执行<code>java -jar HelloWorld.jar</code></p>
 </li>
 </ol>
 <h2 id="1-3-Java程序举例"><a href="#1-3-Java程序举例" class="headerlink" title="1.3 Java程序举例"></a>1.3 Java程序举例</h2><ol>
-<li><p>分类：Application Applet Servlet</p>
+<li><p>分类：Application Applet Servleta</p>
 </li>
 <li><p>输入</p>
 <ul>
@@ -320,14 +320,196 @@
 <td>可以</td>
 </tr>
 </tbody></table>
+<hr>
 </li>
 </ol>
+<h1 id="第五章-面向对象高级程序设计"><a href="#第五章-面向对象高级程序设计" class="headerlink" title="第五章 面向对象高级程序设计"></a>第五章 面向对象高级程序设计</h1><p>5.1-5.3 封装继承多态</p>
+<h2 id="5-4-接口"><a href="#5-4-接口" class="headerlink" title="5.4 接口"></a>5.4 接口</h2><p>接口像是一种特殊的抽象类，这种类只包含常量和方法的定义，没有变量和方法的实现</p>
+<ol>
+<li><code>[public] interface interfaceName [extends SuperInterface1, SuperInterface2]</code></li>
+</ol>
+<ul>
+<li>有public修饰的接口，任意类都可以使用该接口</li>
+<li>缺省情况下，只有同一个包中的类可以调用该接口</li>
+<li>经过编译的生成的interfaceName.class ，即使在缺省情况下，也可以写入其他Java程序中</li>
+</ul>
+<ol start="2">
+<li><p>接口的优点</p>
+<ol>
+<li>通过接口可以实现不相关类的相同行为，不用考虑不相关类的层次问题</li>
+<li>通过接口可以指明多个类需要实现的方法</li>
+<li>通过接口可以了解对象的交互界面，而不需了解对象所对应的类</li>
+</ol>
+</li>
+<li><p>接口的继承</p>
+<p>如果继承多个接口且方法需要重载时，其形参列表应该有差别</p>
+</li>
+</ol>
+<h2 id="5-6-Annotation"><a href="#5-6-Annotation" class="headerlink" title="5.6 Annotation"></a>5.6 Annotation</h2><ol>
+<li>注解，也叫元数据</li>
+<li>可以附加在package，class，method，field等上面 </li>
+<li>@override注明重写</li>
+</ol>
+<h2 id="5-7-内部类和匿名类"><a href="#5-7-内部类和匿名类" class="headerlink" title="5.7 内部类和匿名类"></a>5.7 内部类和匿名类</h2><ul>
+<li>内部类的定义：一个类被嵌套到另一个类中，成为嵌套类；一般来说，嵌套类就是内部类，包含内部类的类成为外部类</li>
+</ul>
+<ol>
+<li><p>内部类的特性</p>
+<ol>
+<li>内部类和外部类名称不能相同</li>
+<li>可以使用包含它的外部类的   静态成员和实例成员变量，可以使用它所在方法的局部变量</li>
+<li>可以定义为abstract  </li>
+<li>可以声明为public和private</li>
+<li>可以声明为static，内部类则变成了顶层类，不能再使用局部变量</li>
+<li>若想在内部类中声明static成员（方法，变量），则内部类必须先声明为static</li>
+</ol>
+<p><strong>静态</strong>：static修饰</p>
+</li>
+<li><p>抽象内部类</p>
+<p>内部类可以定义为抽象类型，但需要被其他内部类继承或实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Student_abstract</span>//抽象内部类，需要继承</span></span><br><span class="line"><span class="class">    </span>&#123;</span><br><span class="line">        String name;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span>；</span></span><br><span class="line"><span class="function">    &#125;</span></span><br><span class="line"><span class="function">    <span class="keyword">public</span> class Student extends Student_abstract<span class="comment">//继承抽象类的内部类</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name1)</span><span class="comment">//构造函数，可以使用抽象内部类的变量和方法</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            name = name1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;这是继承抽象内部类的函数的调用&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内部接口</p>
+<ol>
+<li>内部类可以是一个接口，该接口可以有另一个内部类实现</li>
+</ol>
+</li>
+<li><p>局部内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Name</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function">String <span class="title">getName</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Name <span class="title">test</span><span class="params">(String s)</span><span class="comment">//调用返回一个接口,这个函数属于外部类</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="class"><span class="keyword">class</span> <span class="title">innerName</span> <span class="keyword">implements</span> <span class="title">Name</span>//局部内部类<span class="title">innerName</span>    实现接口<span class="title">Name</span></span></span><br><span class="line"><span class="class">        </span>&#123;</span><br><span class="line">            <span class="keyword">private</span> String name;</span><br><span class="line">            <span class="function"><span class="keyword">private</span> <span class="title">innerName</span><span class="params">(String s)</span><span class="comment">//构造函数</span></span></span><br><span class="line"><span class="function">            </span>&#123;</span><br><span class="line">                name = s;</span><br><span class="line">                System.out.println(getName());</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span><span class="comment">//实现接口的方法</span></span></span><br><span class="line"><span class="function">            </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> name;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> innerName(s);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Studnet stu = <span class="keyword">new</span> Student();</span><br><span class="line">        Name name = stu.test(<span class="string">&quot;Zhangbingyuan&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在方法test中，定义了一个内部类innerName，最后由这个方法返回这个内部类的对象。</p>
+<p>如果在用一个内部类时仅需要创建它的一个对象并返回给外部，就可以这么做。</p>
+</li>
+<li><p>匿名类</p>
+<p>匿名类是不能有名称的类，所以没有办法引用他们。必须在创建的时候，作为new语句的一部分声明</p>
+</li>
+</ol>
+<hr>
+<hr>
+<h1 id="第六章-字符串处理"><a href="#第六章-字符串处理" class="headerlink" title="第六章 字符串处理"></a>第六章 字符串处理</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String s1 = <span class="keyword">new</span> String(<span class="string">&quot;ABC&quot;</span>);</span><br><span class="line">String s2 = <span class="keyword">new</span> String(<span class="string">&quot;ABC&quot;</span>);<span class="comment">// new 新建空间</span></span><br><span class="line">s1.equals(s2);<span class="comment">//true</span></span><br><span class="line">s1 == s2; <span class="comment">//false 两者在内存中的引用是不同的</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String s1 = <span class="string">&quot;ABC&quot;</span>;<span class="comment">//这种构造方式，会先去缓存池找，找到就返回，没有的话， 加入后再返回</span></span><br><span class="line">String s2 = <span class="string">&quot;ABC&quot;</span>;<span class="comment">//跟s1一样，经过s1的构造之后，缓存池有&quot;ABC&quot;字符串，返回跟s1相同的引用位置，因此==为真</span></span><br><span class="line">s1.equals(s2);<span class="comment">//true</span></span><br><span class="line">s1 == s2; <span class="comment">//true 两者在内存中的引用是相同的，涉及到缓存池的知识点</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="String提供的方法"><a href="#String提供的方法" class="headerlink" title="String提供的方法"></a><em>String</em>提供的方法</h2><p><strong>方法会有()参数列表哦</strong>：<code>int len = str.length();</code></p>
+<ol>
+<li><p>length，charAt，indexOf,  lastIndexOf, getChars, getBytes, toCharArray等方法</p>
+</li>
+<li><p>字符串比较equals、compareTo</p>
+<ol>
+<li><pre><code class="java">String str = &quot;abc&quot;;
+str.compareTo(&quot;bbb&quot;);//小于0
+str.compareTo(&quot;aaa&quot;);//大于0
+str.compareTo(&quot;abc&quot;);//等于0
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 字符串的索引</span><br><span class="line"></span><br><span class="line">   &#96;public int index &#x3D; str.indexOf(&#39;a&#39;);&#96;</span><br><span class="line"></span><br><span class="line">4. 字符串的截取</span><br><span class="line"></span><br><span class="line">   &#96;public String subString(int beginIndex [,int endIndex]);&#96;</span><br><span class="line"></span><br><span class="line">5. 字符串的替换</span><br><span class="line"></span><br><span class="line">   1. replace</span><br><span class="line">   2. stim：去掉前后空格后的字符串</span><br><span class="line"></span><br><span class="line">6. 其他</span><br><span class="line"></span><br><span class="line">   - 大小写转换</span><br><span class="line"></span><br><span class="line">   - 转换为字符串数组toCharArray()</span><br><span class="line"></span><br><span class="line">     &#96;&#96;&#96;java</span><br><span class="line">     String strSource &#x3D; new String(&quot;Java is interesting!&quot;);</span><br><span class="line">     char[] ch;</span><br><span class="line">     ch &#x3D; strSource.toCharArray();</span><br><span class="line">     System.out.println(ch);</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+</ol>
+<ul>
+<li><p>字符串复制到字符数组中 getChar(sbegin,send,charArray,cbegin);</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String strSource = <span class="keyword">new</span> String(<span class="string">&quot;Java is interesting!&quot;</span>);</span><br><span class="line"><span class="keyword">char</span>[] ch;</span><br><span class="line"><span class="keyword">int</span> len = strSource.length();</span><br><span class="line">strSource.getChars(<span class="number">0</span>, len, ch, <span class="number">0</span>);<span class="comment">//最后一个0是数组ch的起始位置</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串连接 concat()</p>
+<p><code>s1.concat(s2);</code></p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="6-2-StringBuffer类"><a href="#6-2-StringBuffer类" class="headerlink" title="6.2 StringBuffer类"></a>6.2 StringBuffer类</h2><p>StringBuffer类提供了可以修改字符串内容的方法</p>
+<ol>
+<li><p>构造函数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">StringBuffer</span><span class="params">()</span></span>;<span class="comment">//sb.length()=16;初始默认值</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">StringBuffer</span><span class="params">(<span class="keyword">int</span>)</span></span>;<span class="comment">//len = int;</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">StringBUffer</span><span class="params">(String str)</span></span>;<span class="comment">//sb.length() = str.length()+16;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>常用操作</p>
+<ol>
+<li><p>添加操作append</p>
+<p><code>public StringBuffer append();//各种参数都能加</code></p>
+</li>
+<li><p>插入操作insert</p>
+</li>
+<li><p>字符串缓冲区与字符串之间的转换</p>
+<p><strong>toString()</strong>:很重要</p>
+</li>
+<li><p>取字符charAt(int index);</p>
+</li>
+<li><p>删除字符delete</p>
+<p><code>public StringBuffer delete(int begin, int end);//左闭右开</code></p>
+</li>
+<li><p>重设字符串的长度</p>
+</li>
+<li><p>内容替换</p>
+<p><code>public StringBuffer replace(int sb_begin,int sb_end, replace_str);//一小段串的替换</code></p>
+</li>
+<li><p>取子串</p>
+</li>
+<li><p>字符串反转reverse()</p>
+</li>
+<li><p>获取长度</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">capacity</span><span class="params">()</span></span>;<span class="comment">//返回StringBuffer的字符串缓冲区的容量 空间大小</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">length</span><span class="params">()</span></span>; <span class="comment">// 返回StringBuffer的字符串缓冲区的字符数</span></span><br><span class="line"><span class="comment">//length&lt;=capaticy</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="6-3-StringTokenizer"><a href="#6-3-StringTokenizer" class="headerlink" title="6.3 StringTokenizer"></a>6.3 StringTokenizer</h2><p>这是一个词法分析的类</p>
+<h2 id="6-4-字符串同其他数据类型的转换"><a href="#6-4-字符串同其他数据类型的转换" class="headerlink" title="6.4 字符串同其他数据类型的转换"></a>6.4 字符串同其他数据类型的转换</h2><ol>
+<li><p>将其他类型的简单数据转换成字符串</p>
+<p><code>public String valueOf(double d);</code></p>
+</li>
+<li><p>字符串转化成其他数据</p>
+<ol>
+<li><p>类Double, Float, Long, Integer提供了方法valueOf 转换成相应的封装数据类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Integer <span class="title">valueOf</span><span class="params">(String s)</span> throw NumberFormatException</span>;<span class="comment">//方法声明</span></span><br><span class="line"><span class="comment">//例如</span></span><br><span class="line">String strPI = <span class="string">&quot;3.1415926&quot;</span>;</span><br><span class="line">Double dPI = Double.valueOf(strPI);  <span class="comment">//这里使用</span></span><br><span class="line"><span class="keyword">double</span> ddpi = dPI.doubleValue();</span><br><span class="line"><span class="keyword">float</span> ffpi = dPI.floatValue();</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+<p>用了方法1，还要再次调用对应的dateValue() 方法将对象转换成其他简单数据类型</p>
+</li>
+<li><p>Boolean , Byte ,Double，Integer类等还提供了将String对象转换成其他简单数据类型的方法</p>
+<ol>
+<li><p>声明格式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">parseBoolean</span><span class="params">(String s)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">parseInt</span><span class="params">(String s)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">double</span> <span class="title">parseDouble</span><span class="params">(String s)</span></span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用例子</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String intStr = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="keyword">int</span> num = Integer.parseInt(intStr);</span><br><span class="line">String floatStr = <span class="string">&quot;123.45&quot;</span>;</span><br><span class="line"><span class="keyword">float</span> num = Float.parseFloat(floatStr);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="第七章-Java标准类库"><a href="#第七章-Java标准类库" class="headerlink" title="第七章 Java标准类库"></a>第七章 Java标准类库</h1><h2 id="7-1-简单类型的包装器类"><a href="#7-1-简单类型的包装器类" class="headerlink" title="7.1 简单类型的包装器类"></a>7.1 简单类型的包装器类</h2><p>包装器类wrappers （类都是大写的，是对象，对于自动装箱和自动拆箱的理解）</p>
+<p>Number是Double，Float, Short, Integer , Long, Byte的父类 </p>
+<h3 id="自动装箱和自动拆箱"><a href="#自动装箱和自动拆箱" class="headerlink" title="自动装箱和自动拆箱"></a>自动装箱和自动拆箱</h3><ol>
+<li>JDK5.0以后，基本类型的变量能够自动转换为它的包装器类的对象，称为自动装箱</li>
+<li>自动把包装器类的对象转换成基本类型的值，被称为自动拆箱</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Integer objVal = <span class="number">10</span>; <span class="comment">//autoboxing  ==&gt; </span></span><br><span class="line">Integer objVal = <span class="keyword">new</span> Integer(<span class="number">10</span>);</span><br><span class="line"><span class="keyword">int</span> i = objVal; <span class="comment">//unboxing    ==&gt;</span></span><br><span class="line"><span class="keyword">int</span> i = objVal.intValue();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>类集合只能存放对象，不能存放基本数据类型的值。当把基本类型的值放入集合时，就会发生自动装箱转换；</p>
+</li>
+<li><p>装箱转换可能需要一个包装器类的对象，需要消耗内存，包装器类对象的值是不可变的。因此实际上不需要创建两个拥有相同值的两个不同的包装器类的对象（缓存池的好处）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Integer a = <span class="keyword">new</span> Integer(<span class="number">1</span>);</span><br><span class="line">Integer b = <span class="keyword">new</span> Integer(<span class="number">1</span>);</span><br><span class="line"><span class="comment">//这种做法是浪费内存的，不是特殊情况，没必要这么做。</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="7-2-System类"><a href="#7-2-System类" class="headerlink" title="7.2 System类"></a>7.2 System类</h2><ol>
+<li>数组复制的好方法, System.arraycopy()，比循环有效</li>
+</ol>
+<h2 id="7-3-Runtime类"><a href="#7-3-Runtime类" class="headerlink" title="7.3 Runtime类"></a>7.3 Runtime类</h2><p>Runtime类封装了Java运行时环境。</p>
+<p>通过getRuntime()方法获得当前Runtime对象的引用</p>
+<ul>
+<li>long totalMemory()： 返回Java虚拟机中的内存总量</li>
+<li>long freeMemory()： 返回Java虚拟机中的空闲内存总量，以字节为单位；运行两次可以对比知道分配了多少内存</li>
+<li>void gc()；运行垃圾回收</li>
+</ul>
+<h2 id="7-4-Math类"><a href="#7-4-Math类" class="headerlink" title="7.4 Math类"></a>7.4 Math类</h2><p>查看API文档</p>
+<h2 id="7-5-日期时间使用工具类"><a href="#7-5-日期时间使用工具类" class="headerlink" title="7.5 日期时间使用工具类"></a>7.5 日期时间使用工具类</h2><p>Date、Calendar、GregorianCalendar</p>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/21/%E7%AC%AC%E4%B8%80%E7%AB%A0-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" data-id="ckgjkmx8z000rmgfdevae08mx" class="article-share-link" data-share="baidu" data-title="Java">Share</a>
+        <a data-url="http://example.com/2020/10/21/%E7%AC%AC%E4%B8%80%E7%AB%A0-Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" data-id="ckgmghv610009nwfd2z1e9s7r" class="article-share-link" data-share="baidu" data-title="Java">Share</a>
       
 
       
@@ -378,7 +560,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/20/git/" data-id="ckgjkmx6i0001mgfdep7jelhf" class="article-share-link" data-share="baidu" data-title="Git">Share</a>
+        <a data-url="http://example.com/2020/10/20/git/" data-id="ckgmghv570003nwfd4gxodz4e" class="article-share-link" data-share="baidu" data-title="Git">Share</a>
       
 
       
@@ -428,7 +610,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/15/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" data-id="ckgjkmx84000omgfd3otshdes" class="article-share-link" data-share="baidu" data-title="开发规范">Share</a>
+        <a data-url="http://example.com/2020/10/15/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" data-id="ckgmghv5f0005nwfd3eyb8f9y" class="article-share-link" data-share="baidu" data-title="开发规范">Share</a>
       
 
       
@@ -490,7 +672,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/14/%E8%BF%90%E8%A1%8C%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AEhalo/" data-id="ckgjkmx6z0008mgfdbk84hslz" class="article-share-link" data-share="baidu" data-title="运行开源项目halo">Share</a>
+        <a data-url="http://example.com/2020/10/14/%E8%BF%90%E8%A1%8C%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AEhalo/" data-id="ckgmghv66000bnwfd2j9j1zy7" class="article-share-link" data-share="baidu" data-title="运行开源项目halo">Share</a>
       
 
       
@@ -584,7 +766,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/13/%E9%9D%A2%E7%BB%8F/" data-id="ckgjkmx80000bmgfd95by97d6" class="article-share-link" data-share="baidu" data-title="面经">Share</a>
+        <a data-url="http://example.com/2020/10/13/%E9%9D%A2%E7%BB%8F/" data-id="ckgmghv6h000gnwfdatfh3yb2" class="article-share-link" data-share="baidu" data-title="面经">Share</a>
       
 
       
@@ -665,7 +847,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/13/Java%E7%AC%94%E8%AE%B0/" data-id="ckgjkmx2x0000mgfd9cdl7cnd" class="article-share-link" data-share="baidu" data-title="Java笔记">Share</a>
+        <a data-url="http://example.com/2020/10/13/Java%E7%AC%94%E8%AE%B0/" data-id="ckgmghv2v0000nwfd6utv94om" class="article-share-link" data-share="baidu" data-title="Java笔记">Share</a>
       
 
       
@@ -728,7 +910,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/12/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" data-id="ckgjkmx6w0005mgfdeh5oggew" class="article-share-link" data-share="baidu" data-title="开源项目使用指南">Share</a>
+        <a data-url="http://example.com/2020/10/12/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" data-id="ckgmghv5l0008nwfdb72x9v19" class="article-share-link" data-share="baidu" data-title="开源项目使用指南">Share</a>
       
 
       
@@ -780,7 +962,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/12/%E9%93%BE%E6%8E%A5github-io%E5%87%BA%E9%94%99/" data-id="ckgjkmx7y0009mgfdbivmadjq" class="article-share-link" data-share="baidu" data-title="连接github.io出错">Share</a>
+        <a data-url="http://example.com/2020/10/12/%E9%93%BE%E6%8E%A5github-io%E5%87%BA%E9%94%99/" data-id="ckgmghv6b000enwfd9o5xfc3p" class="article-share-link" data-share="baidu" data-title="连接github.io出错">Share</a>
       
 
       
@@ -844,7 +1026,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/12/hexo%E4%BD%BF%E7%94%A8/" data-id="ckgjkmx6s0003mgfd25tvcald" class="article-share-link" data-share="baidu" data-title="hexo使用">Share</a>
+        <a data-url="http://example.com/2020/10/12/hexo%E4%BD%BF%E7%94%A8/" data-id="ckgmghv4x0001nwfd8peyehlj" class="article-share-link" data-share="baidu" data-title="hexo使用">Share</a>
       
 
       
@@ -955,7 +1137,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/10/12/markdown%E8%AF%AD%E6%B3%95/" data-id="ckgjkmx6u0004mgfdfjxibkok" class="article-share-link" data-share="baidu" data-title="markdown语法">Share</a>
+        <a data-url="http://example.com/2020/10/12/markdown%E8%AF%AD%E6%B3%95/" data-id="ckgmghv5b0004nwfd7v8b27fn" class="article-share-link" data-share="baidu" data-title="markdown语法">Share</a>
       
 
       
